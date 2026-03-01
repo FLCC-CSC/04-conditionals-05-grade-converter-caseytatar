@@ -1,8 +1,8 @@
 # FILE NAME - grade_converter.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Casey Tatar
+# DATE: 3/1/206
+# BRIEF DESCRIPTION:  Most learning management systems (Blackboard, Brightspace, etc.) have a feature where grades can be expressed as either percentages or letters. This experience will ask for a percentage and - using the table found in the specifications - return the corresponding letter grade.
 
 
 
@@ -15,22 +15,41 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-print('===== Grade Converter =====')
+def main():
+    
+    grade_converter()
 
-percent = int(input('Enter a numerical grade (1-100): '))
+def grade_converter():
+    
+   print('===== Grade Converter =====')
+   grade = int(input('Enter a numerical grade (1-100): '))
 
-if percent > 100:
-    print('A+')
-elif percent >= 90:
-    print('A')
-elif percent >= 80:
-    print('B')
-elif percent >= 70:
-    print('C')
-elif percent >= 65:
-    print('D')
-else:
-    print('F')
+   if 0 <= grade < 65:
+      print('F')
+   elif 65 <= grade < 70:
+      print('D')
+   elif 70 <= grade < 80:
+      print('C')
+   elif 80 <= grade < 90:
+      print('B')
+   elif 90 <= grade <= 100:
+      print('A')
+   elif 100 < grade <= 1000:
+      print('A+')
+   else:
+    print('INVALID GRADE')
+
+
+main()
+    
+
+
+
+
+
+
+
+
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -85,7 +104,7 @@ D
 1. What is something you would tell a future student to be careful about when
    doing this lab?
 
-
+Be careful about including and excluding numbers that are inputed by the user. 
 
 
 
